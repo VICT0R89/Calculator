@@ -1,0 +1,92 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+--primary-color:rgb(14, 8, 77);
+--secundary-color:rgb(0, 0, 0);
+--btn-ca:rgb(92, 0, 0);
+--btn-c:rgb(142, 86, 14);
+--btn:rgb(100, 98, 95);
+--btn-ac:rgb(145, 145, 34);
+--shadow:5px 5px rgb(0,0,0)
+}
+
+button{
+  width: 60px;
+  height: 60px;
+  border-radius: 25%;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.act-btn{
+  background-color: var(--btn-ac);
+}
+.nr-btn{
+  background-color: var(--btn);
+}
+#c{
+  background-color: var(--btn-c);
+}
+#ca{
+  background-color: var(--btn-ca);
+}
+
+
+.container{
+  box-shadow: var(--shadow);
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 5%;
+  .display-container{
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 10%;
+    margin: 15px 0px;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    .display{
+    margin: 0 10px;
+    color: var(--secundary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    }
+  }
+  .buttons{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    .btn-container{
+      width: 90%;
+      height: 90%;
+      display: grid;
+      grid-template-columns: 1fr span 4;
+      grid-template-rows: 1fr span 5;
+      gap: 10px 10px; 
+      grid-template-areas: 
+        ". . . ."
+        ". . . ."
+        ". . . .";
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+  }
+}
