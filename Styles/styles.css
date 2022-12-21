@@ -4,14 +4,18 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
 :root {
-  --primary-color:rgb(14, 8, 77);
-  --secundary-color:rgb(0, 0, 0);
+  --primary-color:rgb(5, 0, 63);
+  --secundary-color:rgb(12, 0, 143);
   --btn-ca:rgb(92, 0, 0);
   --btn-c:rgb(142, 86, 14);
   --btn:rgb(100, 98, 95);
   --btn-ac:rgb(145, 145, 34);
-  --shadow:5px 5px rgb(0,0,0) ;
+  --shadow: 0 0 5px 5px rgb(5, 0, 63), 0 0 10px 10px rgb(13, 0, 155);
 }
 
 button {
@@ -20,6 +24,7 @@ button {
   border-radius: 25%;
   font-size: 1rem;
   box-shadow: var(--shadow);
+  border: 2px solid var(--secundary-color);
   cursor: pointer;
 }
 
@@ -39,26 +44,33 @@ button {
   background-color: var(--btn-ca);
 }
 
+#point {
+  font-size: 2rem;
+}
+
 .container {
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 5px 5px rgb(131, 212, 255), 0 0 10px 15px rgb(0, 195, 255);
   width: 350px;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color);
+  background-color: var(--secundary-color);
   border-radius: 5%;
+  border: 2px solid rgb(161, 220, 255);
+  transform: translate(25%, 15%);
 }
 .container .display-container {
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 5px 5px rgb(16, 167, 255);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 80%;
   height: 10%;
   margin: 15px 0px;
-  background-color: whitesmoke;
+  background-color: rgb(161, 220, 255);
+  border: 2px solid rgb(16, 167, 255);
   border-radius: 10%;
 }
 .container .display-container .display {
@@ -88,4 +100,4 @@ button {
   align-content: center;
   justify-content: center;
   justify-items: center;
-}/*# sourceMappingURL=styles.css.map */
+}
