@@ -4,18 +4,20 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--primary-color);
+:root {
+  --primary-color:rgb(220, 220, 220);
+  --secundary-color:rgb(160, 160, 160);
+  --tertiary-color:rgb(140, 140, 140);
+  --btn-ca-hover:rgb(255, 19, 19);
+  --btn-ca:rgb(255, 97, 97);
+  --btn-c-hover:rgb(255, 148, 9);
+  --btn-c:rgb(255, 175, 70);
+  --btn-ac-hover:rgb(255, 255, 0);
+  --btn-ac:rgb(255, 255, 154);
 }
 
-:root {
-  --primary-color:rgb(5, 0, 63);
-  --secundary-color:rgb(12, 0, 143);
-  --btn-ca:rgb(92, 0, 0);
-  --btn-c:rgb(142, 86, 14);
-  --btn:rgb(100, 98, 95);
-  --btn-ac:rgb(145, 145, 34);
-  --shadow: 0 0 5px 5px rgb(5, 0, 63), 0 0 10px 10px rgb(13, 0, 155);
+body {
+  background-color: black;
 }
 
 button {
@@ -23,25 +25,61 @@ button {
   height: 60px;
   border-radius: 25%;
   font-size: 1rem;
-  box-shadow: var(--shadow);
-  border: 2px solid var(--secundary-color);
   cursor: pointer;
 }
 
 .act-btn {
+  border-top: 2px solid var(--btn-ac-hover);
+  border-right: 2px solid var(--btn-ac-hover);
+  border-bottom: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
   background-color: var(--btn-ac);
+  transition: background-color 0.5s ease-in-out;
+}
+.act-btn:hover {
+  background-color: var(--btn-ac-hover);
+  border-bottom: 2px solid var(--btn-ac);
+  border-left: 2px solid var(--btn-ac);
 }
 
 .nr-btn {
-  background-color: var(--btn);
+  border-top: 2px solid var(--tertiary-color);
+  border-right: 2px solid var(--tertiary-color);
+  border-bottom: 2px solid var(--secundary-color);
+  border-left: 2px solid var(--secundary-color);
+  background-color: var(--primary-color);
+  transition: background-color 0.5s ease-in-out;
+}
+.nr-btn:hover {
+  background-color: var(--secundary-color);
+  border-bottom: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
 }
 
 #c {
+  border-top: 2px solid var(--btn-c-hover);
+  border-right: 2px solid var(--btn-c-hover);
+  border-bottom: 2px solid var(--btn-c);
+  border-left: 2px solid var(--btn-c);
   background-color: var(--btn-c);
+  transition: background-color 0.5s ease-in-out;
+}
+#c:hover {
+  background-color: var(--btn-c-hover);
 }
 
 #ca {
+  border-top: 2px solid var(--btn-ca-hover);
+  border-right: 2px solid var(--btn-ca-hover);
+  border-bottom: 2px solid var(--btn-ca);
+  border-left: 2px solid var(--btn-ca);
   background-color: var(--btn-ca);
+  transition: background-color 0.5s ease-in-out;
+}
+#ca:hover {
+  background-color: var(--btn-ca-hover);
+  border-bottom: 2px solid var(--btn-ca);
+  border-left: 2px solid var(--btn-ca);
 }
 
 #point {
@@ -49,7 +87,10 @@ button {
 }
 
 .container {
-  box-shadow: 0 0 5px 5px rgb(131, 212, 255), 0 0 10px 15px rgb(0, 195, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 350px;
   height: 500px;
   display: flex;
@@ -57,25 +98,28 @@ button {
   justify-content: center;
   align-items: center;
   background-color: var(--secundary-color);
-  border-radius: 5%;
-  border: 2px solid rgb(161, 220, 255);
-  transform: translate(25%, 15%);
+  border-top: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--tertiary-color);
+  border-left: 2px solid var(--tertiary-color);
 }
 .container .display-container {
-  box-shadow: 0 0 5px 5px rgb(16, 167, 255);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 80%;
   height: 10%;
   margin: 15px 0px;
-  background-color: rgb(161, 220, 255);
-  border: 2px solid rgb(16, 167, 255);
-  border-radius: 10%;
+  background-color: var(--primary-color);
+  box-shadow: inset 0px 0px 10px var(--tertiary-color), inset 0px 10px 20px var(--secundary-color);
+  border-top: 2px solid var(--tertiary-color);
+  border-right: 2px solid var(--tertiary-color);
+  border-bottom: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
 }
 .container .display-container .display {
   margin: 0 10px;
-  color: var(--secundary-color);
+  color: var(--tertiary-color);
   font-size: 2rem;
   font-weight: 600;
 }
@@ -100,4 +144,4 @@ button {
   align-content: center;
   justify-content: center;
   justify-items: center;
-}
+}/*# sourceMappingURL=styles.css.map */
